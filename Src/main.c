@@ -131,7 +131,7 @@ int main(void)
     HD44780_SetCursor(0,0);
 
     //INITIALIZE THE SERVO MOTORS
-    //HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
+    HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
     //htim2.Instance->CCR2=0; //180
 
     //INITIALIZE THE CAMERA
@@ -156,9 +156,6 @@ int main(void)
   /* USER CODE BEGIN WHILE */
 
   while (1){
-	 rotateServo('3');
-	 HAL_Delay(1000);
-	 /*
 	 if(dma_flag){
 		HAL_Delay(400);
 		HAL_GPIO_WritePin(SHUTTER_GPIO_Port, SHUTTER_Pin, GPIO_PIN_RESET);
@@ -171,11 +168,9 @@ int main(void)
 	 else{
 		 HAL_Delay(5);
 	 }
-	 */
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  /*
 	 switch(state){
 	 case IDLE:
 		 if(HAL_GPIO_ReadPin(GPIOE, GPIO_PIN_0)==0){
@@ -205,13 +200,12 @@ int main(void)
 		 state = ROTATING;
 		 break;
 	 case ROTATING:
-		 rotateServo('3');
+		 rotateServo(category);
 		 state= IDLE;
 		 HAL_Delay(1000);
 		 printIdle();
 		 break;
 	 }
-	 */
   }
   /* USER CODE END 3 */
 }
@@ -452,7 +446,7 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 840;
+  htim2.Init.Prescaler = 1680;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim2.Init.Period = 1000;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;

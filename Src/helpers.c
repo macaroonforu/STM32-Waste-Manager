@@ -50,9 +50,10 @@ void rotateServo(char num){
 		break;
 
 	case '3':
+		HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
 		HAL_GPIO_WritePin(GPIOD,  GPIO_PIN_5, GPIO_PIN_SET);
 
-		htim2.Instance->CCR2=200; //75% duty cycle = 2.0ms = CCW Rotation?
+		htim2.Instance->CCR2=750; //75% duty cycle = 2.0ms = CCW Rotation?
 		HAL_Delay(1000);
 
 		htim2.Instance->CCR2=0; //PAUSE
@@ -68,13 +69,13 @@ void rotateServo(char num){
 	case '4':
 		HAL_GPIO_WritePin(GPIOD,  GPIO_PIN_4, GPIO_PIN_SET);
 
-		htim2.Instance->CCR2=100; //75% duty cycle = 1.5ms
+		htim2.Instance->CCR2=750; //75% duty cycle = 1.5ms
 		HAL_Delay(1000);
 
 		htim2.Instance->CCR2=0; //PAUSE
 		HAL_Delay(10000);
 
-		htim2.Instance->CCR2=250; //25% duty cycle = 0.5ms
+		htim2.Instance->CCR2=100; //25% duty cycle = 0.5ms
 		HAL_Delay(1000);
 
 		HAL_GPIO_WritePin(GPIOD,  GPIO_PIN_4, GPIO_PIN_RESET);
