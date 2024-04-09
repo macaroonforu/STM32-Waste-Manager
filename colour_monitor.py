@@ -2,7 +2,7 @@ import time
 import cv2 as cv
 import numpy as np
 from serial import Serial
-from model2 import predict_garbage_class
+from model_colour import predict_garbage_class
 
 PORT = "COM3"
 BAUDRATE = 115200

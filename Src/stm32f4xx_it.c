@@ -288,7 +288,7 @@ void DMA2_Stream1_IRQHandler(void)
   if(dma_flag==0){
   		HAL_DCMI_Suspend(&hdcmi);
   		dma_flag = 1;
-  		//HAL_GPIO_WritePin(SHUTTER_GPIO_Port, SHUTTER_Pin, GPIO_PIN_SET);
+  		HAL_GPIO_WritePin(SHUTTER_GPIO_Port, SHUTTER_Pin, GPIO_PIN_SET);
   }
   /* USER CODE END DMA2_Stream1_IRQn 1 */
 }
