@@ -8,7 +8,7 @@
 	<br>
 	</h1>
   <h3><b>By Thardchi Ganesalingam and Claire Dimitriuc</b></h3>
-	<!--<h3><b><a href="https://devpost.com/software/ferrofetcher">View Devpost Submission</a></b></h3>-->
+	<h3><b><a href="https://youtu.be/AWQnSevc0zM">View Demonstration Video</a></b></h3>
   <img src = "https://github.com/macaroonforu/STM32-Waste-Manager/blob/main/demo.gif">
 </div>
 
