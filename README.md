@@ -15,9 +15,15 @@
 
 
 ## Description
-Using the STM32 LQFP144 microcontroller (on a nucleo-f446ze development board) to stream image data from an OV7670 camera module in RGB QQVGA format to a computer on which A ML model performs image classification into 4 waste categories. We then rotate a "chute" to allow a person to throw their garbage away, using servo motors. We control 4 servo motors with one PWM signal by using transistors.
+We were inspired by the UofT garbage cans. If you ever look inside one of them, people are clearly not sorting according to the labeled categories... 
 
- ![thumbnail_IMG_4558](https://github.com/macaroonforu/STM32-Waste-Manager/assets/121368271/d09726ce-0833-41b5-9937-e740d9fde19b)
+ <img src = "https://github.com/macaroonforu/STM32-Waste-Manager/assets/121368271/86eaebc3-8d33-41fb-9e08-0041cd35f8d6" height="400px" width="400px">
+
+### What if a computer could do the sorting for you?
+
+We used the STM LQFP144 microcontroller (on a nucleo-f446ze development board) to stream image data from an OV7670 camera module in RGB QQVGA format to a computer on which A ML model performed image classification into one of the 4 waste categories (Garbage, Paper, Containers, or Coffee Cups). We then rotate a "chute" to allow a person to throw their garbage away, using servo motors. We control 4 servo motors with one PWM signal by using transistors.
+
+ <img src = "https://github.com/macaroonforu/STM32-Waste-Manager/assets/121368271/d09726ce-0833-41b5-9937-e740d9fde19b" height="500px" width="500px">
 
 
 
