@@ -15,10 +15,11 @@
 
 
 ## Description
-We were inspired by the UofT garbage cans. If you ever look inside one of them, people are clearly not sorting according to the labeled categories... 
+We were inspired by the UofT garbage cans. 
 
- <img src = "https://github.com/macaroonforu/STM32-Waste-Manager/assets/121368271/86eaebc3-8d33-41fb-9e08-0041cd35f8d6" height="400px" width="400px">
-
+ <img src = "https://github.com/macaroonforu/STM32-Waste-Manager/assets/121368271/e2b4fe69-1f78-4627-b645-14b6705c03af" height="400px" width="400px">
+ 
+If you ever look inside one of them, people are clearly not sorting according to the labeled categories... 
 ### What if a computer could do the sorting for you?
 
 We used the STM LQFP144 microcontroller (through a STM32 Nucleo-F446ZE development board) to stream image data from an OV7670 camera module in RGB QQVGA format to a computer on which A ML model performed image classification into one of the 4 waste categories (Garbage, Paper, Containers, or Coffee Cups). We then rotate a "chute" to allow a person to throw their garbage away, using servo motors. We control 4 servo motors with one PWM signal by using transistors.
