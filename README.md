@@ -7,7 +7,7 @@
     <img src = "https://github.com/macaroonforu/STM32-Waste-Manager/assets/121368271/294f8741-c4a2-4b7c-be57-5f69f1c9fa5e" height="40px" width="120px">
 	<br>
 	</h1>
-	<h3><b><a href="https://youtu.be/AWQnSevc0zM">Demonstration Video</a></b></h3>
+	<h3><b><a href="https://youtu.be/knVAxiWxsZU">View Our Demonstration Video</a></b></h3>
   <img src = "https://github.com/macaroonforu/STM32-Waste-Manager/blob/main/demo.gif">
 </div>
 
