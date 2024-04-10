@@ -9,16 +9,16 @@
 	</h1>
   <h3><b>By Thardchi Ganesalingam and Claire Dimitriuc</b></h3>
 	<!--<h3><b><a href="https://devpost.com/software/ferrofetcher">View Devpost Submission</a></b></h3>-->
-  <img src = "https://github.com/macaroonforu/STM32-Waste-Manager/blob/main/ezgif-5-5aa8df63cf.gif">
+  <img src = "https://github.com/macaroonforu/STM32-Waste-Manager/blob/main/demo.gif">
 </div>
 
- 
+
+
 
 ## Description
-A joystick-controlled Arduino robot developed at MakeUofT on February 17-18, 2024 that picks up magnetic objects using an electromagnet and pulley system.The joystick by default controls the wheels of the robot, but after pressing a button, an electromagnet is turned on, and the joystick controls the motion of the pulley instead. 
+Using the STM32 LQFP144 microcontroller (on a nucleo-f446ze development board) to stream image data from an OV7670 camera module in RGB QQVGA format to a computer on which A ML model performs image classification into 4 waste categories. We then rotate a "chute" to allow a person to throw their garbage away, using servo motors. We control 4 servo motors with one PWM signal by using transistors.
 
-
-
+ ![thumbnail_IMG_4558](https://github.com/macaroonforu/STM32-Waste-Manager/assets/121368271/d09726ce-0833-41b5-9937-e740d9fde19b)
 
 
 
