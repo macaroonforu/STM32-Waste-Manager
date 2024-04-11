@@ -23,7 +23,14 @@ We were inspired by the current waste sorting scheme on the garbage cans at the 
  
 ## How could a microcontroller fix this problem?
 
-We used the STM LQFP144 microcontroller (through a STM32 Nucleo-F446ZE development board) to stream image data from an OV7670 camera module in RGB QQVGA format to a computer (via UART) on which a simple simple machine learning model that was adapted from Resnet (a pretrained convolutional neural network for image classification) by replacing the last layer with a linear layer for classification sorted the image into one of the 4 waste categories (Garbage, Paper, Containers, or Coffee Cups), then sent the predicted class back to the micro-controller. The microcontroller then writes this prediction to an LCD display as a visual cue for the user, then turns on the proper servo motor which rotates a "chute" to allow a person to throw their garbage away. We control 4 servo motors with one PWM signal by using transistors.
+We used the STM LQFP144 microcontroller (through a STM32 NUCLEO-F446ZE development board) to collect YUV image data in QQVGA resolution from an OV7670 camera module, which was then converted to RGB format and streamed to a computer (via UART), where it was displayed on a "monitor" using openCV library. 
+
+We used Resnet (a pretrained convolutional neural network for image classification) to implement a simple classifier by replacing the last layer with a linear layer for classification that would sort the image into one of the 4 waste categories (Garbage, Paper, Containers, or Coffee Cups), then send the predicted class back to the microcontroller. 
+
+
+The microcontroller then writes this prediction to an LCD display as a visual cue for the user, then turns on the proper servo motor which rotates a "chute" to allow a person to throw their garbage away. Each servo motor is controlled through a transsitor with a GPIO output pin connected to its base, 5V connected to the collector, and the power wire of the servo connected to the emitter. We connect GPIO output pins to the bases of 4 transistors, so that power can be supplied to and cut-off from the servo motors by writing high/low signals to the GPIO pins. Thus, even if all 4 servo motors share the same PWM signal, only one will ever rotate at a time because only one will ever be one at a time. 
+
+
 
 <div align=center>
  <img src = "https://github.com/macaroonforu/STM32-Waste-Manager/assets/121368271/d09726ce-0833-41b5-9937-e740d9fde19b" height="500px" width="500px">
