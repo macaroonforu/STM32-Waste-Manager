@@ -28,7 +28,7 @@ We used the STM LQFP144 microcontroller (through a STM32 Nucleo-F446ZE developme
  <img src = "https://github.com/macaroonforu/STM32-Waste-Manager/assets/121368271/d09726ce-0833-41b5-9937-e740d9fde19b" height="500px" width="500px">
 </div>
 
-## Connections Made on the Microcontroller 
+## Connections to the microcontroller 
 <div align=center>
  <img src = "https://github.com/macaroonforu/STM32-Waste-Manager/assets/121368271/86754468-ee91-4c28-8a6c-17869651d7a7" height="500px" width="659px">
 </div>
@@ -43,6 +43,12 @@ The ML model was not the main focus of the project, so we would like to increase
 <img width="350" alt="image" src="https://github.com/macaroonforu/STM32-Waste-Manager/assets/121368271/13ca90b1-b415-45e8-bb8d-c9f1ef98c673">
 </div>
 
-Additionally, we would like to eventually have the model to be run on the micro-controller (stored in external memory such as RAM or Flash), and to stream the camera data to a TFT LCD display instead of a computer.
+We would also like to have inference be run on the microcontroller instead of on a computer, and to stream camera data to a TFT LCD display so the system can be fully offline. 
 
+## Credits 
+<h4><b><a href="https://controllerstech.com/servo-motor-with-stm32/">Controlling Servo Motors</a></b></h4>
+<h4><b><a href="https://www.micropeta.com/video61/">I2C LCD Driver</a></b></h4>
+<h4><b><a href="https://embeddedprogrammer.blogspot.com/2012/07/hacking-ov7670-camera-module-sccb-cheat.html">OV7670 Info</a></b></h4>
+<h4><b><a href="https://fourcc.org/fccyvrgb.php">YUV-RGB Conversion</a></b></h4>
+<h4><b><a href="https://github.com/arndtjenssen/ov7670/blob/master/ov7670_test/camera_config.h">OV7670 Register Configuration</a></b></h4>
 
