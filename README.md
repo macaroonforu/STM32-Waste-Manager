@@ -51,5 +51,4 @@ We would also like to have inference be run on the microcontroller instead of on
 <h4><b><a href="https://www.micropeta.com/video61/">I2C LCD Driver</a></b></h4>
 <h4><b><a href="https://embeddedprogrammer.blogspot.com/2012/07/hacking-ov7670-camera-module-sccb-cheat.html">OV7670 Info</a></b></h4>
 <h4><b><a href="https://fourcc.org/fccyvrgb.php">YUV-RGB Conversion</a></b></h4>
-<h4><b><a href="https://github.com/arndtjenssen/ov7670/blob/master/ov7670_test/camera_config.h">OV7670 Register Configuration</a></b></h4>
 
