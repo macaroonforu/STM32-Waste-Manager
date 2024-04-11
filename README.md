@@ -15,16 +15,34 @@
 
 
 ## Description
-We were inspired by the UofT garbage cans. 
-
+We were inspired by the current waste sorting scheme on the garbage cans at the University of Toronto. Often, people don't have the time to take a look at what is in their hand and read all the labels to make sure they put it in the right bin, so they just end up throwing it in a random one. 
+<div  align=center>
  <img src = "https://github.com/macaroonforu/STM32-Waste-Manager/assets/121368271/e2b4fe69-1f78-4627-b645-14b6705c03af" height="400px" width="400px">
+</div>
  
-If you ever look inside one of them, people are clearly not sorting according to the labeled categories... 
-### What if a computer could do the sorting for you?
+## How could a microcontroller fix this problem?
 
-We used the STM LQFP144 microcontroller (through a STM32 Nucleo-F446ZE development board) to stream image data from an OV7670 camera module in RGB QQVGA format to a computer on which A ML model performed image classification into one of the 4 waste categories (Garbage, Paper, Containers, or Coffee Cups). We then rotate a "chute" to allow a person to throw their garbage away, using servo motors. We control 4 servo motors with one PWM signal by using transistors.
+We used the STM LQFP144 microcontroller (through a STM32 Nucleo-F446ZE development board) to stream image data from an OV7670 camera module in RGB QQVGA format to a computer (via UART) on which a simple simple machine learning model that was adapted from Resnet (a pretrained convolutional neural network for image classification) by replacing the last layer with a linear layer for classification sorted the image into one of the 4 waste categories (Garbage, Paper, Containers, or Coffee Cups), then sent the predicted class back to the micro-controller. The microcontroller then writes this prediction to an LCD display as a visual cue for the user, then turns on the proper servo motor which rotates a "chute" to allow a person to throw their garbage away. We control 4 servo motors with one PWM signal by using transistors.
 
+<div align=center>
  <img src = "https://github.com/macaroonforu/STM32-Waste-Manager/assets/121368271/d09726ce-0833-41b5-9937-e740d9fde19b" height="500px" width="500px">
+</div>
 
+## Connections Made on the Microcontroller 
+<div align=center>
+ <img src = "https://github.com/macaroonforu/STM32-Waste-Manager/assets/121368271/86754468-ee91-4c28-8a6c-17869651d7a7" height="500px" width="659px">
+</div>
+
+## Future Improvement 
+
+The ML model was not the main focus of the project, so we would like to increase its accuracy and ability to differentiate paper coffee cups from mixed paper and containers.
+<div align = center>
+<img width="350" alt="image" src="https://github.com/macaroonforu/STM32-Waste-Manager/assets/121368271/c682e3b8-9ee7-4dab-9786-cbcceea0e134">
+<img width="350" alt="image" src="https://github.com/macaroonforu/STM32-Waste-Manager/assets/121368271/c1c998ea-3c6c-47ea-af62-f659a66044a5">
+<img width="350" alt="image" src="https://github.com/macaroonforu/STM32-Waste-Manager/assets/121368271/bf8a1e9b-8c59-4439-8603-922620751d7e">
+<img width="350" alt="image" src="https://github.com/macaroonforu/STM32-Waste-Manager/assets/121368271/13ca90b1-b415-45e8-bb8d-c9f1ef98c673">
+</div>
+
+Additionally, we would like to eventually have the model to be run on the micro-controller (stored in external memory such as RAM or Flash), and to stream the camera data to a TFT LCD display instead of a computer.
 
 
