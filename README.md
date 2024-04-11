@@ -34,6 +34,7 @@ We used the STM LQFP144 microcontroller (through a STM32 Nucleo-F446ZE developme
 </div>
 
 ## Future Improvement 
+<h4><b><a href="https://colab.research.google.com/drive/1ROumRpmJ9ZZQu_F84963ObqwUeS4Fjj7?usp=sharing">Colab Training Notebook</a></b></h4>
 
 The ML model was not the main focus of the project, so we would like to increase its accuracy and ability to differentiate paper coffee cups from mixed paper and containers.
 <div align = center>
