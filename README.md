@@ -23,12 +23,12 @@ We were inspired by the current waste sorting scheme on the garbage cans at the 
  
 ## How could a microcontroller fix this problem?
 
-We used the STM LQFP144 microcontroller (through a STM32 NUCLEO-F446ZE development board) to collect YUV image data in QQVGA resolution from an OV7670 camera module, which was then converted to RGB format and streamed to a computer (via UART), where it was displayed on a "monitor" using openCV library. 
+We used the LQFP144 microcontroller (through a STM32 NUCLEO-F446ZE development board) to collect YUV image data in QQVGA resolution from an OV7670 camera module, which was then converted to RGB format and streamed to a computer (via UART), where it was displayed on a "monitor" using openCV library. 
 
 We used Resnet (a pretrained convolutional neural network for image classification) to implement a simple classifier by replacing the last layer with a linear layer for classification that would sort the image into one of the 4 waste categories (Garbage, Paper, Containers, or Coffee Cups), then send the predicted class back to the microcontroller. 
 
 
-The microcontroller then writes this prediction to an LCD display as a visual cue for the user, then turns on the proper servo motor which rotates a "chute" to allow a person to throw their garbage away. Each servo motor is controlled through a transistor that has a GPIO output pin connected to its base, 5V connected to the collector, and VDD for the servo connected to its emitter. The GPIO output pins connected to the bases of the transistors allow them to be used as switches, so that power can be supplied-to and cut-off from the servo motors by writing high/low signals to the GPIO pins. Since all 4 motors share the same PWM signal (adjusting the duty cycle of this signal through software enables CW/CCW rotation), transistors ensure only one will ever rotate at a time because only one will ever be one at a time. 
+The microcontroller then writes this prediction to an LCD display as a visual cue for the user, then turns on the proper servo motor which rotates an opening to allow a person to throw their garbage away. Each servo motor is controlled through a transistor that has a GPIO output pin connected to its base, 5V connected to the collector, and VDD for the servo connected to its emitter. The GPIO output pins connected to the bases of the transistors allow them to be used as switches, so that power can be supplied-to and cut-off from the servo motors by writing high/low signals to the GPIO pins. Since all 4 motors share the same PWM signal (adjusting the duty cycle of this signal through software enables CW/CCW rotation), transistors ensure only one will ever rotate at a time because only one will ever be one at a time. 
 
 
 
