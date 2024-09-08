@@ -21,7 +21,7 @@ We were inspired by the current waste sorting scheme on the garbage cans at the 
  
 ## How could a microcontroller fix this problem?
 
-We used the LQFP144 microcontroller (through a STM32 NUCLEO-F446ZE development board) to collect YUV image data in QQVGA resolution from an OV7670 camera module, which was then converted to RGB format and streamed to a computer (via UART), where it was displayed on a "monitor" using openCV library. 
+We used the STM32 microcontroller (through a STM32 NUCLEO-F446ZE development board) to collect YUV image data in QQVGA resolution from an OV7670 camera module, which was then converted to RGB format and streamed to a computer (via UART), where it was displayed on a "monitor" using openCV library. 
 
 We used Resnet (a pretrained convolutional neural network for image classification) to implement a simple classifier by replacing the last layer with a linear layer for classification that would sort the image into one of the 4 waste categories (Garbage, Paper, Containers, or Coffee Cups), then send the predicted class back to the microcontroller. 
 
